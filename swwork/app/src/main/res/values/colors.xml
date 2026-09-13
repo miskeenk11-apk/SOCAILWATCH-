@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="youtube_red">#FF1010</color>
+    <color name="facebook_blue">#1473E6</color>
+    <color name="tiktok_black">#101010</color>
+    <color name="border_dark">#303039</color>
+</resources>
