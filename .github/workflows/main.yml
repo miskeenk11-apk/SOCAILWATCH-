@@ -20,15 +20,17 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: Make Gradle executable
-        run: chmod +x android/gradlew
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.7'
 
       - name: Build APK
-        working-directory: android
-        run: ./gradlew assembleDebug
+        working-directory: swwork
+        run: gradle assembleDebug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: SocialWatch-APK
-          path: android/app/build/outputs/apk/debug/*.apk
+          path: swwork/app/build/outputs/apk/debug/*.apk
